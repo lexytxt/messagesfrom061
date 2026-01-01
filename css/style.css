@@ -8,6 +8,21 @@ body {
     padding: 20px;
 }
 
+main section {
+    background-color: #ffffff;
+    border: 2px solid #ff0000;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+    font-family: 'UnifrakturCook', cursive;
+    color: #ff0000;
+    text-align: center;
+}
+
 header {
     text-align: center;
     padding: 20px 0;
@@ -15,7 +30,6 @@ header {
 }
 
 header h1 {
-    color: #ff0000;
     margin: 0;
 }
 
@@ -30,9 +44,13 @@ nav a:hover {
     text-decoration: underline;
 }
 
-h2 {
+a {
     color: #ff0000;
-    text-align: center;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 footer {
