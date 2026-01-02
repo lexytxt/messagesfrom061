@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 body {
-    background-color: #ffffff;
-    color: #000000;
-    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Press Start 2P', cursive;
     line-height: 1.8;
     max-width: 900px;
     margin: auto;
@@ -11,17 +13,16 @@ body {
 header {
     text-align: center;
     padding: 25px 0;
-    border-bottom: 2px solid #ff0000;
 }
 
 header h1 {
-    color: #ff0000;
+    color: #ffffff;
     margin: 0;
     font-size: 2em;
 }
 
 nav a {
-    color: #ff0000;
+    color: #ffffff;
     margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
@@ -29,25 +30,23 @@ nav a {
 }
 
 nav a:hover {
-    color: #cc0000;
-    text-decoration: underline;
+    color: #ff0000;
 }
 
 section {
-    background-color: #ffffff;
+    background-color: #000000;
     border: 2px solid #ff0000;
     border-radius: 12px;
     padding: 25px;
     margin: 25px 0;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    text-align: left;
-    color: #000000;
+    box-shadow: 0 4px 8px rgba(255,0,0,0.1);
+    color: #ffffff;
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
 section:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 12px rgba(255,0,0,0.2);
 }
 
 section p {
@@ -55,7 +54,7 @@ section p {
 }
 
 h2 {
-    color: #000000;
+    color: #ffffff;
     font-size: 1.5em;
     margin-bottom: 15px;
 }
@@ -63,9 +62,9 @@ h2 {
 footer {
     text-align: center;
     padding: 20px 0;
-    border-top: 1px solid #ff0000;
+    border-top: 2px solid #ff0000;
     font-size: 0.9em;
-    color: #333333;
+    color: #ffffff;
 }
 
 @media (max-width: 600px) {
