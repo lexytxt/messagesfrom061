@@ -22,32 +22,35 @@ section {
     background-color: #fefefc;
     border: 2px solid #CE2029;
     border-radius: 15px;
-    padding: 26px;
-    margin: 32px 0;
+    padding: 20px 18px;
+    margin: 20px auto;
+    max-width: 600px; /* smaller container width */
     text-align: left;
 }
 
 h2 {
     font-size: 1.5rem;
-    margin-bottom: 18px;
+    margin-bottom: 14px;
 }
 
 #message-list {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 12px;
-    margin: 24px 0;
+    gap: 10px;
+    margin: 16px 0;
 }
 
 #message-list a {
     display: block;
-    padding: 14px 26px;
+    padding: 12px 20px;
     background-color: #CE2029;
     border-radius: 10px;
     text-decoration: none;
     color: #000000;
-    font-size: 1.05rem;
+    font-size: 1rem;
+    width: 100%; /* fill container */
+    box-sizing: border-box;
 }
 
 #message-list a:hover {
