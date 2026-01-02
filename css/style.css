@@ -34,6 +34,13 @@ header h1 {
     transition: all 0.3s ease;
 }
 
+#home-button svg {
+    vertical-align: middle;
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
 #home-button:hover {
     background-color: #ffffff;
     border: 2px solid #CE2029;
