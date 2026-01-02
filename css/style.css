@@ -1,20 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Chicle&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
 
 body {
-    background-color: #f7cfd8;
+    background-color: #fefefc;
     color: #000000;
-    font-family: 'Chicle', cursive;
+    font-family: 'Ranchers', cursive;
     line-height: 1.7;
     max-width: 900px;
     margin: 0 auto;
     padding: 24px;
     font-size: 1rem;
     text-align: center;
-}
-
-a {
-    color: #000000;
-    text-decoration: none;
 }
 
 header {
@@ -26,32 +21,37 @@ header h1 {
     margin: 0;
 }
 
-nav {
-    margin: 32px 0;
+#message-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin: 24px 0;
 }
 
-nav a {
+#message-list a {
     display: block;
     width: fit-content;
-    margin: 14px auto;
     padding: 14px 28px;
     border: 2px solid #000000;
     border-radius: 10px;
-    font-size: 1.2rem;
+    text-decoration: none;
     text-align: center;
+    font-size: 1.1rem;
 }
 
-nav a:hover {
+#message-list a:hover {
     background-color: #000000;
-    color: #f7cfd8;
+    color: #fefefc;
 }
 
 section {
-    background-color: #f7cfd8;
+    background-color: #fefefc;
     border: 2px solid #000000;
     border-radius: 10px;
     padding: 26px;
     margin: 32px 0;
+    text-align: left;
 }
 
 h2 {
@@ -59,30 +59,13 @@ h2 {
     margin-bottom: 18px;
 }
 
-section p {
-    font-size: 1.1rem;
-    margin-bottom: 16px;
-    text-align: left;
-    white-space: pre-line;
-}
-
-article {
-    margin: 40px 0;
-    text-align: center;
-}
-
-article h3 {
-    font-size: 1.3rem;
-    margin: 18px 0;
-}
-
 .profile-photo {
-    display: block;
     width: 80px;
     height: 80px;
-    margin: 0 auto 16px;
     border-radius: 50%;
     object-fit: cover;
+    display: block;
+    margin: 0 auto 16px;
 }
 
 footer {
