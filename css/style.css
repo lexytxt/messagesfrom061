@@ -8,7 +8,6 @@ body {
     max-width: 900px;
     margin: 0 auto;
     padding: 24px;
-    font-size: 1rem;
     text-align: center;
 }
 
@@ -19,6 +18,7 @@ header {
 header h1 {
     font-size: 3rem;
     margin: 0;
+    color: #CE2029;
 }
 
 #message-list {
@@ -33,21 +33,23 @@ header h1 {
     display: block;
     width: fit-content;
     padding: 14px 28px;
-    border: 2px solid #000000;
+    border: 2px solid #CE2029;
     border-radius: 10px;
     text-decoration: none;
     text-align: center;
     font-size: 1.1rem;
+    color: #000000; /* text stays black */
+    transition: all 0.3s ease;
 }
 
 #message-list a:hover {
-    background-color: #000000;
-    color: #fefefc;
+    background-color: #CE2029; /* button background turns accent color */
+    color: #fefefc; /* text turns off-white for contrast */
 }
 
 section {
     background-color: #fefefc;
-    border: 2px solid #000000;
+    border: 2px solid #CE2029;
     border-radius: 10px;
     padding: 26px;
     margin: 32px 0;
@@ -57,6 +59,7 @@ section {
 h2 {
     font-size: 1.6rem;
     margin-bottom: 18px;
+    color: #CE2029;
 }
 
 .profile-photo {
@@ -66,11 +69,13 @@ h2 {
     object-fit: cover;
     display: block;
     margin: 0 auto 16px;
+    border: 2px solid #CE2029;
 }
 
 footer {
     padding: 24px 0;
-    border-top: 2px solid #000000;
+    border-top: 2px solid #CE2029;
     font-size: 0.9rem;
     text-align: center;
+    color: #CE2029;
 }
