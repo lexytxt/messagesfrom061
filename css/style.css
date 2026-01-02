@@ -6,9 +6,10 @@ body {
     font-family: 'Chicle', cursive;
     line-height: 1.7;
     max-width: 900px;
-    margin: auto;
+    margin: 0 auto;
     padding: 24px;
     font-size: 1rem;
+    text-align: center;
 }
 
 a {
@@ -46,6 +47,7 @@ h2 {
 section p {
     font-size: 1.1rem;
     margin-bottom: 16px;
+    text-align: left;
 }
 
 footer {
@@ -55,23 +57,13 @@ footer {
     font-size: 0.9rem;
 }
 
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 2.4rem;
-    }
-
-    h2 {
-        font-size: 1.4rem;
-    }
-
-    section p {
-        font-size: 1rem;
-    }
-
-    nav a {
-        display: block;
-        margin: 10px 0;
-    }
+.profile-photo {
+    display: block;
+    margin: 0 auto 16px auto;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 article {
@@ -97,4 +89,23 @@ article h3::after {
 article p {
     text-align: left;
     margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2.4rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    section p {
+        font-size: 1rem;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
 }
