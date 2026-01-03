@@ -95,7 +95,7 @@ p {
     font-size: 1rem;
     line-height: 1.2;
     margin: 0 0 1.5em 0;
-    white-space: pre-line;
+    white-space: normal;
     text-indent: 0;
 }
 
