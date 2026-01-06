@@ -106,5 +106,49 @@
 })();
 </script>
 
+<script>
+(function() {
+    const itemsPerPage = 1; 
+    let currentPage = 1;
+
+    const list = document.getElementById('message-list');
+    const links = Array.from(list.querySelectorAll('a'));
+
+    const prevBtn = document.getElementById('prev');
+    const nextBtn = document.getElementById('next');
+    const pageInfo = document.getElementById('page-info');
+
+    function renderPage() {
+        const start = (currentPage - 1) * itemsPerPage;
+        const end = start + itemsPerPage;
+
+        links.forEach((link, index) => {
+            link.style.display = index >= start && index < end ? 'block' : 'none';
+        });
+
+        pageInfo.textContent = `Page ${currentPage} of ${Math.ceil(links.length / itemsPerPage)}`;
+
+        prevBtn.disabled = currentPage === 1;
+        nextBtn.disabled = end >= links.length;
+    }
+
+    prevBtn.addEventListener('click', () => {
+        if (currentPage > 1) {
+            currentPage--;
+            renderPage();
+        }
+    });
+
+    nextBtn.addEventListener('click', () => {
+        if (currentPage * itemsPerPage < links.length) {
+            currentPage++;
+            renderPage();
+        }
+    });
+
+    renderPage(); // show the first page initially
+})();
+</script>
+
 </body>
 </html>
