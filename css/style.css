@@ -76,29 +76,6 @@ h2{
 font-size:1.5rem;
 margin-bottom:14px;
 }
-#contact{
-text-align:center;
-}
-#contact p{
-margin-bottom:10px;
-font-size:0.9rem;
-}
-#contact .social-link{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-color:#000000;
-background-color:#fefefc;
-border:2px solid #000000;
-padding:6px 10px;
-border-radius:8px;
-text-decoration:none;
-transition:opacity 0.2s ease,background-color 0.2s ease;
-}
-#contact .social-link:hover{
-background-color:#ffffff;
-opacity:0.8;
-}
 #search-bar{
 width:100%;
 padding:10px 14px;
@@ -160,24 +137,24 @@ transition:opacity 0.2s ease,background-color 0.2s ease;
 background-color:#ffffff;
 opacity:0.8;
 }
-.social-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #fefefc;
-    border: 2px solid #000000;
-    border-radius: 8px;
-    padding: 8px 16px;
-    color: #000000;
-    text-decoration: none;
-    transition: opacity 0.2s ease, background-color 0.2s ease;
+.social-link{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+background-color:#fefefc;
+border:2px solid #000000;
+border-radius:8px;
+padding:8px 16px;
+color:#000000;
+text-decoration:none;
+transition:opacity 0.2s ease,background-color 0.2s ease;
 }
-.social-link:hover {
-    background-color: #ffffff;
-    opacity: 0.8;
+.social-link:hover{
+background-color:#ffffff;
+opacity:0.8;
 }
-.social-link svg {
-    stroke: #000000;
+.social-link svg{
+stroke:#000000;
 }
 p{
 font-size:1rem;
