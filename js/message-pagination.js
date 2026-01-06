@@ -11,9 +11,9 @@ const index=messages.indexOf(current);
 const container=document.getElementById("message-pagination");
 if(container){
 container.innerHTML=
-(index>0?`<a href="${messages[index-1]}">← Previous Message</a>`:`<span style="opacity:0.5;">← Previous Message</span>`)
+(index>0?`<a href="${messages[index-1]}">← Previous</a>`:`<span style="opacity:0.5;">← Previous</span>`)
 +`<span style="margin:0 12px;">|</span>`+
-(index<messages.length-1?`<a href="${messages[index+1]}">Next Message →</a>`:`<span style="opacity:0.5;">Next Message →</span>`);
+(index<messages.length-1?`<a href="${messages[index+1]}">Next →</a>`:`<span style="opacity:0.5;">Next →</span>`);
 }
 const shareBtn=document.getElementById('share-btn');
 if(shareBtn){
