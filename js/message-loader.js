@@ -2,11 +2,9 @@
     const params = new URLSearchParams(window.location.search);
     const file = params.get('file');
     if (!file) return;
-
     const contentContainer = document.getElementById('message-content');
-    const repoBase = location.pathname.replace(/\/[^/]*$/, '/');
+    const repoBase = '/'; // replace with your repo base if using e.g., '/Messages-From-061/'
     const markdownPath = repoBase + 'messages/' + file;
-
     fetch(markdownPath)
         .then(res => {
             if (!res.ok) throw new Error('File not found');
@@ -23,7 +21,6 @@
             } else {
                 titleText = file.replace('.md', '');
             }
-
             contentContainer.innerHTML =
                 `<h1>${titleText}</h1>` + marked.parse(lines.join('\n'));
         })
