@@ -66,6 +66,21 @@ header nav a:hover,
     stroke: #000000;
     fill: currentColor;
 }
+section,
+.message,
+.markdown-body {
+    background-color: #fefefc;
+    border: 2px solid #000000;
+    border-radius: 15px;
+    padding: 20px 18px;
+    margin: 16px auto;
+    max-width: 600px;
+    text-align: left;
+    background-image:
+        linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
 .message { text-align: left; }
 .markdown-body { text-align: left; }
 h2 { font-size: 1.5rem; margin-bottom: 14px; }
@@ -80,10 +95,9 @@ h2 { font-size: 1.5rem; margin-bottom: 14px; }
     font-family: 'Space Mono', monospace;
 }
 #message-list {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
     margin: 16px 0;
 }
 #message-list a {
@@ -97,6 +111,7 @@ h2 { font-size: 1.5rem; margin-bottom: 14px; }
     width: 100%;
     box-sizing: border-box;
     transition: background-color 0.2s ease, border 0.2s ease;
+    text-align: center;
 }
 #message-list a:hover { background-color: #ffffff; border: 2px solid #000000; }
 #message-pagination a {
@@ -168,4 +183,5 @@ input:focus-visible {
 }
 @media (max-width: 600px) {
     section { padding: 18px 14px; }
+    #message-list { grid-template-columns: 1fr; gap: 10px; }
 }
