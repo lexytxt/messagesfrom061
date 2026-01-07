@@ -13,16 +13,15 @@
         })
         .then(md => {
             const lines = md.split('\n');
-            let titleLineIndex = lines.findIndex(l => l.trim().startsWith('# '));
-            let titleText = '';
-            if (titleLineIndex >= 0) {
-                titleText = lines[titleLineIndex].replace(/^#\s*/, '');
-                lines.splice(titleLineIndex, 1);
+            let titleIndex = lines.findIndex(l => l.trim().startsWith('# '));
+            let title = '';
+            if (titleIndex >= 0) {
+                title = lines[titleIndex].replace(/^#\s*/, '');
+                lines.splice(titleIndex, 1);
             } else {
-                titleText = file.replace('.md', '');
+                title = file.replace('.md', '');
             }
-
-            contentContainer.innerHTML = `<h1>${titleText}</h1>` + marked.parse(lines.join('\n'));
+            contentContainer.innerHTML = `<h1>${title}</h1>` + marked.parse(lines.join('\n'));
             const messages = [
                 "eyes-wide-shut.md",
                 "i-want-to-be-somebody-to-you.md",
@@ -43,7 +42,7 @@
                     if (navigator.share) {
                         try {
                             await navigator.share({
-                                title: titleText,
+                                title: title,
                                 text: "Check out this message from Messages from 061.",
                                 url: window.location.href
                             });
