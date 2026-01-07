@@ -1,54 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Messages from 061</title>
-    <meta name="description" content="Messages from 061 is a raw poetry collection, capturing my lived experiences.">
-    <link rel="stylesheet" href="css/style.css">
-</head>   
-<body>    
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Messages from 061</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 <header>
-    <div class="title-container">
-        <h1>Messages from 061</h1>
-    </div>
-    <nav>
-        <a href="about.html">About</a>
-    </nav>
+  <div class="title-container">
+    <h1>Messages from 061</h1>
+  </div>
+  <nav>
+    <a href="about.html">About</a>
+  </nav>
 </header>
 <main>
-    <section id="messages" class="paper">
-        <h2>Messages</h2>
-        <input type="text" id="search-bar" placeholder="Search messages..." />
-        <div id="message-list">
-            <a href="message.html?file=eyes-wide-shut.md">Eyes wide shut</a>
-            <a href="message.html?file=i-want-to-be-somebody-to-you.md">I want to be somebody to you</a>
-            <a href="message.html?file=russian-roulette.md">Russian roulette</a>
-            <a href="message.html?file=she-cant-run.md">She can't run</a>
-            <a href="message.html?file=the-last-bite.md">The last bite</a>
-        </div>
-    </section>
-</main>   
+  <section id="messages" class="paper">
+    <h2>Messages</h2>
+    <input type="text" id="search-bar" placeholder="Search messages..." />
+    <div id="message-list">
+      <a href="message.html?file=eyes-wide-shut.md">Eyes wide shut</a>
+      <a href="message.html?file=i-want-to-be-somebody-to-you.md">I want to be somebody to you</a>
+      <a href="message.html?file=russian-roulette.md">Russian roulette</a>
+      <a href="message.html?file=she-cant-run.md">She can't run</a>
+      <a href="message.html?file=the-last-bite.md">The last bite</a>
+    </div>
+  </section>
+</main>
 <footer>
-    <p>© toolexyforyou. All rights reserved.</p>
+  <p>© toolexyforyou. All rights reserved.</p>
 </footer>
 <script>
 (function () {
     const list = document.getElementById('message-list');
     if (!list) return;
-
     const links = Array.from(list.querySelectorAll('a'));
     links.sort((a, b) => a.textContent.localeCompare(b.textContent))
          .forEach(link => list.appendChild(link));
-
     const searchBar = document.getElementById('search-bar');
     if (!searchBar) return;
-
     searchBar.addEventListener('input', () => {
         const query = searchBar.value.toLowerCase();
         links.forEach(link => {
-            link.style.display =
-                link.textContent.toLowerCase().includes(query) ? 'block' : 'none';
+            link.style.display = link.textContent.toLowerCase().includes(query) ? 'block' : 'none';
         });
     });
 })();
