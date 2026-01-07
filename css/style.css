@@ -60,19 +60,11 @@ header nav a:hover,
     padding: 0;
     margin: 0 6px;
 }
-#home-button svg { width: 24px; height: 24px; stroke: #000000; vertical-align: middle; }
-section, .message, .markdown-body {
-    background-color: #fefefc;
-    border: 2px solid #000000;
-    border-radius: 15px;
-    padding: 20px 18px;
-    margin: 16px auto;
-    max-width: 600px;
-    text-align: left;
-    background-image:
-        linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
-    background-size: 20px 20px;
+#home-button svg {
+    width: 24px;
+    height: 24px;
+    stroke: #000000;
+    fill: currentColor;
 }
 .message { text-align: left; }
 .markdown-body { text-align: left; }
