@@ -1,6 +1,7 @@
 ---
 layout: default
 title: She can't run
+permalink: /she-cant-run.html
 ---
 
 When the only person left 
