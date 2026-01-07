@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Eyes wide shut
+permalink: /eyes-wide-shut.html
 ---
 
 I want you to know  
