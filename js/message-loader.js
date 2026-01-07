@@ -1,10 +1,9 @@
 (function(){
     const contentContainer = document.getElementById('message-content');
-    const titleElement = document.getElementById('message-title');
-    if(!contentContainer || !titleElement) return;
+    if(!contentContainer) return;
 
-    const params = new URLSearchParams(window.location.search);
-    const file = params.get('file');
+    const urlParams = new URLSearchParams(window.location.search);
+    const file = urlParams.get('file');
     if(!file) {
         contentContainer.innerHTML = '<p>No message specified.</p>';
         return;
@@ -15,9 +14,8 @@
     fetch(markdownPath)
         .then(response => response.text())
         .then(md => {
-            contentContainer.innerHTML = marked.parse(md);
-            const firstLine = md.split('\n').find(line => line.trim().length > 0);
-            titleElement.textContent = firstLine.replace(/^#\s+/,'');
+            // wrap in markdown-body for styling
+            contentContainer.innerHTML = `<div class="markdown-body">${marked.parse(md)}</div>`;
         })
         .catch(err => {
             contentContainer.innerHTML = '<p>Could not load message.</p>';
