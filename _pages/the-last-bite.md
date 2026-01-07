@@ -1,6 +1,7 @@
 ---
 layout: default
 title: The last bite
+permalink: /the-last-bite.html
 ---
 
 She can act like it,  
