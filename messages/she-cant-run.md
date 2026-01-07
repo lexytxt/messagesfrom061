@@ -1,7 +1,4 @@
-<section class="message markdown-body">
-    <h2>She can't run</h2>
-    <div id="message-content"></div>
-</section>
+# She can't run
 
 When the only person left  
 to root for her  
