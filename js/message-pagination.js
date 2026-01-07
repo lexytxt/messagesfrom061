@@ -28,7 +28,7 @@
         try {
           await navigator.share({
             title: document.getElementById("message-title")?.textContent || "Message",
-            text: "Check out this message from "Messages from 061"",
+            text: "Check out this message from Messages from 061.",
             url: window.location.href
           });
         } catch {}
