@@ -1,5 +1,3 @@
-# Russian roulette
-
 Go ahead, pull the trigger,
 why put up a fight?
 When you can be another “you deserve better”
