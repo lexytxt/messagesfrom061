@@ -3,43 +3,90 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About - Messages from 061</title>
+<title>Message - Messages from 061</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header>
-<div class="title-container">
-<h1>Messages from 061</h1>
-</div>
-<nav>
-<a href="index.html" id="home-button">
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-<path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-</svg>
-</a>
-</nav>
+  <div class="title-container">
+    <h1>Messages from 061</h1>
+  </div>
+  <nav>
+    <a href="index.html" id="home-button">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+      </svg>
+    </a>
+  </nav>
 </header>
 <main>
-<section id="about" class="paper">
-<h2>About</h2>
-<img src="https://github.com/toolexyforyou.png" alt="Profile photo" class="profile-photo">
-<p>I’m @toolexyforyou, a young woman from Southern Africa. I study journalism and media at a local university. So it’s no surprise that I’ve been crazy about both consuming and creating media for as long as I can remember! I created “Messages from 061” to house the dramatic, lyric, and narrative poetry I write about different points in my life.</p>
-</section>
-<section id="contact" class="paper">
-<p>Feel free to contact me, @toolexyforyou, on Instagram!</p>
-</section>
-<div style="text-align:center; margin-top:12px;">
-<a href="https://www.instagram.com/toolexyforyou" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-<rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-<path d="M16 11.37a4 4 0 1 1-7.94 1.18 4 4 0 0 1 7.94-1.18z"></path>
-<line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line>
-</svg>
-</a>
-</div>
+  <section class="message markdown-body">
+    <h2 id="message-title"></h2>
+    <div id="message-content" class="markdown-body"></div>
+  </section>
+  <div id="message-pagination" style="text-align:center; margin:24px 0;"></div>
+  <div class="share-container" style="text-align:center; margin-bottom:24px;">
+    <button id="share-btn">Share!</button>
+  </div>
 </main>
 <footer>
-<p>© 2026 toolexyforyou. All rights reserved.</p>
+  <p>© 2026 toolexyforyou. All rights reserved.</p>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+(function(){
+  const params = new URLSearchParams(window.location.search);
+  const file = params.get('file');
+  if(!file) return;
+  const contentContainer = document.getElementById('message-content');
+  const titleContainer = document.getElementById('message-title');
+  const markdownPath = 'messages/' + file;
+  fetch(markdownPath)
+    .then(res => res.text())
+    .then(md => {
+      contentContainer.innerHTML = marked.parse(md);
+      const firstLine = md.split('\n').find(l => l.trim().startsWith('#'));
+      let title = firstLine ? firstLine.replace(/^#+\s*/, '') : file.replace('.md','');
+      title = title.split(' ').map(w=>w.charAt(0).toUpperCase()+w.slice(1)).join(' ');
+      titleContainer.textContent = title;
+    })
+    .catch(err => { contentContainer.innerHTML='<p>Could not load message.</p>'; console.error(err); });
+})();
+</script>
+<script>
+(function(){
+  const messages=[
+    "message.html?file=eyes-wide-shut.md",
+    "message.html?file=i-want-to-be-somebody-to-you.md",
+    "message.html?file=russian-roulette.md",
+    "message.html?file=she-cant-run.md",
+    "message.html?file=the-last-bite.md"
+  ];
+  const current = window.location.href;
+  const index = messages.findIndex(m=>current.includes(m.split('?')[1]));
+  const container = document.getElementById("message-pagination");
+  if(container){
+    container.innerHTML =
+      (index>0?`<a href="${messages[index-1]}">← Previous</a>`:`<span style="opacity:0.5;">← Previous</span>`)
+      +`<span style="margin:0 12px;">|</span>`
+      +(index<messages.length-1?`<a href="${messages[index+1]}">Next →</a>`:`<span style="opacity:0.5;">Next →</span>`);
+  }
+  const shareBtn = document.getElementById("share-btn");
+  if(shareBtn){
+    shareBtn.addEventListener("click", async ()=>{
+      if(navigator.share){
+        try{
+          await navigator.share({title: document.querySelector("h2").textContent,text:"Check out this message from Messages from 061!",url:window.location.href});
+        }catch(err){console.error(err);}
+      }else{alert("Your browser does not support sharing. Copy the URL instead: "+window.location.href);}
+    });
+  }
+  document.addEventListener("keydown", e=>{
+    if(index<0) return;
+    if(e.key==="ArrowLeft" && index>0) window.location.href=messages[index-1];
+    if(e.key==="ArrowRight" && index<messages.length-1) window.location.href=messages[index+1];
+  });
+})();
+</script>
 </body>
 </html>
