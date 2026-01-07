@@ -1,4 +1,7 @@
-# I want to be somebody to you
+<section class="message markdown-body">
+    <h2>I want to be somebody to you</h2>
+    <div id="message-content"></div>
+</section>
 
 I wonder if you still feel me  
 in moments that flash by.  
