@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Messages from 061</title>
-    <meta name="description" content="Messages from 061 is a raw poetry collection, capturing my lived experiences.">
-    <link rel="stylesheet" href="css/style.css">
-</head>   
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Messages from 061</title>
+<meta name="description" content="Messages from 061 is a raw poetry collection, capturing my lived experiences.">
+<link rel="stylesheet" href="css/style.css">
+</head>
 <body>    
 <header>
     <div class="title-container">
@@ -21,16 +21,16 @@
         <h2>Messages</h2>
         <input type="text" id="search-bar" placeholder="Search messages..." />
         <div id="message-list">
-            <a href="messages/eyes-wide-shut.md">Eyes wide shut</a>
-            <a href="messages/i-want-to-be-somebody-to-you.md">I want to be somebody to you</a>
-            <a href="messages/russian-roulette.md">Russian roulette</a>
-            <a href="messages/she-cant-run.md">She can't run</a>
-            <a href="messages/the-last-bite.md">The last bite</a>
+            <a href="messages/eyes-wide-shut.html">Eyes wide shut</a>
+            <a href="messages/i-want-to-be-somebody-to-you.html">I want to be somebody to you</a>
+            <a href="messages/russian-roulette.html">Russian roulette</a>
+            <a href="messages/she-cant-run.html">She can't run</a>
+            <a href="messages/the-last-bite.html">The last bite</a>
         </div>
     </section>
 </main>   
 <footer>
-    <p>© toolexyforyou. All rights reserved.</p>
+    <p>© 2026 toolexyforyou. All rights reserved.</p>
 </footer>
 <script>
 (function () {
@@ -39,21 +39,16 @@
 
     const links = Array.from(list.querySelectorAll('a'));
 
-    links
-        .sort((a, b) => a.textContent.localeCompare(b.textContent))
-        .forEach(link => list.appendChild(link));
+    links.sort((a, b) => a.textContent.localeCompare(b.textContent))
+         .forEach(link => list.appendChild(link));
 
     const searchBar = document.getElementById('search-bar');
     if (!searchBar) return;
 
     searchBar.addEventListener('input', () => {
         const query = searchBar.value.toLowerCase();
-
         links.forEach(link => {
-            link.style.display =
-                link.textContent.toLowerCase().includes(query)
-                    ? 'block'
-                    : 'none';
+            link.style.display = link.textContent.toLowerCase().includes(query) ? 'block' : 'none';
         });
     });
 })();
