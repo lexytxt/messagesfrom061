@@ -125,10 +125,6 @@ section,
     background-color: #fefefc;
     border: 2px solid #000000;
     border-radius: 15px;
-    background-image:
-        linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
-    background-size: 20px 20px;
 }
 
 .message .markdown-body > *:not(h1:first-of-type) {
