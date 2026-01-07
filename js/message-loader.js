@@ -2,9 +2,10 @@
     const params = new URLSearchParams(window.location.search);
     const file = params.get('file');
     if (!file) return;
+
     const contentContainer = document.getElementById('message-content');
-    const titleContainer = document.getElementById('message-title');
     const markdownPath = 'messages/' + file;
+
     fetch(markdownPath)
         .then(res => res.text())
         .then(md => {
@@ -19,8 +20,9 @@
                 titleText = file.replace('.md', '');
             }
 
-            titleContainer.textContent = titleText;
-            contentContainer.innerHTML = marked.parse(lines.join('\n'));
+            // Inject title as H1 inside the content container
+            contentContainer.innerHTML =
+                `<h1>${titleText}</h1>` + marked.parse(lines.join('\n'));
         })
         .catch(err => {
             contentContainer.innerHTML = '<p>Could not load message.</p>';
