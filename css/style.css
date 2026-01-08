@@ -26,6 +26,7 @@ header {
     margin: 0 auto 24px auto;
     text-align: center;
     max-width: 750px;
+    width: 100%;
     background-image:
         linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
@@ -101,7 +102,7 @@ section,
     background-image: none;
 }
 .message .markdown-body {
-    max-width: 100%;
+    max-width: 750px;
     width: 100%;
     margin: 0 auto;
 }
