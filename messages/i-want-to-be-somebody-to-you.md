@@ -1,7 +1,5 @@
 # I want to be somebody to you
-
----------------------------------------
-
+______________________________________
 I wonder if you still feel me  
 in moments that flash by.  
 Not always, not often,  
