@@ -8,7 +8,15 @@ When you can be another
 “you deserve better”
 by the end of the night.
 
-If the bullet 
+Tell me pretty white lies
+about how you only 
+have eyes for me.
+
+Like, “I never, ever 
+tasted nothing 
+so sweet.”
+
+When the bullet 
 flies out the muzzle,
 it's my teeth that I'll bite,
 
