@@ -1,5 +1,5 @@
-# ☘︎ Eyes wide shut ☘︎
-
+# Eyes wide shut
+☘︎ ☘︎ ☘︎ ☘︎ ☘︎ ☘︎ ☘︎ ☘︎ ☘︎ ☘︎ ☘︎ ☘︎ ☘︎ ☘︎ ☘︎ ☘︎ ☘︎ ☘︎
 It didn’t start in that doctor’s office:
 with her eyes wide shut,
 her pupils blackened,
@@ -24,3 +24,4 @@ But I just want you to know
 it didn’t start in that doctor’s office
 when her back slid down
 the cold vinyl couch.
+☘︎ ☘︎ ☘︎ ☘︎ ☘︎ ☘︎ ☘︎ ☘︎ ☘︎ ☘︎ ☘︎ ☘︎ ☘︎ ☘︎ ☘︎ ☘︎ ☘︎ ☘︎
