@@ -81,8 +81,7 @@ header nav a:hover,
     fill: currentColor;
 }
 section,
-.markdown-body,
-.message {
+.markdown-body {
     background-color: #fefefc;
     border: 2px solid #000000;
     border-radius: 15px;
@@ -100,7 +99,7 @@ section,
     border-radius: 15px;
     padding: 0;
     margin: 16px auto;
-    max-width: 700px;
+    max-width: 750px;
     width: 100%;
     box-sizing: border-box;
 }
@@ -108,9 +107,9 @@ section,
     background-color: #fefefc;
     border: 2px solid #000000;
     border-radius: 15px;
-    padding: 16px;
+    padding: 20px;
     margin: 0 auto;
-    max-width: 680px;
+    max-width: 730px;
     width: 100%;
     box-sizing: border-box;
 }
@@ -118,9 +117,6 @@ section,
     display: grid;
     grid-template-rows: auto 1fr;
     gap: 12px;
-    background-color: #fefefc;
-    border: 2px solid #000000;
-    border-radius: 15px;
 }
 .message .markdown-body {
     max-width: 100%;
