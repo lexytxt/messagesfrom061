@@ -16,6 +16,7 @@ body {
     text-align: center;
     opacity: 0;
     animation: fadeIn 0.4s ease forwards;
+    box-sizing: border-box;
 }
 main {
     flex: 1;
@@ -30,12 +31,13 @@ header {
     background-color: #fefefc;
     border: 2px solid #000000;
     border-radius: 15px;
-    padding: 20px 18px;
-    display: inline-block;
-    margin: 0 auto 24px auto;
+    padding: 20px;
+    display: block;
+    margin: 16px auto;
     text-align: center;
     max-width: 600px;
-    width: 90%;
+    width: 100%;
+    box-sizing: border-box;
     background-image:
         linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
@@ -83,36 +85,30 @@ header nav a:hover,
     fill: currentColor;
 }
 section,
-.markdown-body {
+.markdown-body,
+.message {
     background-color: #fefefc;
     border: 2px solid #000000;
     border-radius: 15px;
-    padding: 20px 18px;
+    padding: 20px;
     margin: 16px auto;
     max-width: 600px;
-    width: 90%;
+    width: 100%;
     text-align: left;
-    background-image:
-        linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
-    background-size: 20px 20px;
+    display: block;
+    box-sizing: border-box;
 }
 .message {
     display: grid;
     grid-template-rows: auto 1fr;
     gap: 12px;
-    max-width: 600px;
-    width: 90%;
-    margin: 16px auto;
-    padding: 0;
     background: none;
     border: none;
     border-radius: 0;
-    background-image: none;
 }
 .message .markdown-body {
     max-width: 100%;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
 }
 .message .markdown-body h1:first-of-type {
@@ -250,7 +246,7 @@ input:focus-visible {
     outline: 2px solid #000000;
     outline-offset: 3px;
 }
-@media (max-width: 700px) {
+@media (max-width: 600px) {
     section {
         padding: 18px 14px;
     }
