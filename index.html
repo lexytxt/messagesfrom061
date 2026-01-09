@@ -16,7 +16,7 @@
   </nav>
 </header>
 <main>
-<section id="messages" class="paper">
+<section id="messages" class="section-content">
   <h2>Messages</h2>
   <input type="text" id="search-bar" placeholder="Search messages..." />
   <div id="message-list">
@@ -36,10 +36,8 @@
     const list = document.getElementById('message-list');
     if (!list) return;
     const links = Array.from(list.querySelectorAll('a'));
-    // Sort alphabetically
     links.sort((a, b) => a.textContent.localeCompare(b.textContent))
          .forEach(link => list.appendChild(link));
-    // Search
     const searchBar = document.getElementById('search-bar');
     if (!searchBar) return;
     searchBar.addEventListener('input', () => {
