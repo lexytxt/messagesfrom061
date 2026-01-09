@@ -106,12 +106,12 @@ section,
     display: block;
     margin: 16px auto;
     width: 100%;
-    max-width: 600px;
+    max-width: 650px;
     padding: 12px;
     border: 2px solid #000000;
     border-radius: 18px;
     box-sizing: border-box;
-    background: none;
+    background-color: #fefefc;
 }
 .message .markdown-body {
     width: 100%;
@@ -121,6 +121,7 @@ section,
     border-radius: 14px;
     box-sizing: border-box;
     background-color: #fefefc;
+    background-image: none;
 }
 .message .markdown-body h1:first-of-type {
     margin: 0 0 16px 0;
