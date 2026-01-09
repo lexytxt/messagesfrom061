@@ -7,15 +7,18 @@ and her eyebrows raised up.
 
 It started at the 
 blinding casino entrance,
-where she was shit out of luck.
+where she was 
+shit out of luck.
 
 It started on that 
 glittery blackjack table,
-where she spent her last buck.
+where she spent 
+her last buck.
 
 It started in that 
 dingy parking lot,
-where she dozed off in his truck.
+where she dozed off 
+in his truck.
 
 But I just want you to know 
 it didn’t start in that doctor’s office
