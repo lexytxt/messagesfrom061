@@ -98,9 +98,9 @@ section,
     display: grid;
     grid-template-rows: auto 1fr;
     gap: 12px;
+    background-color: #fefefc;
     border: 2px solid #000000;
     border-radius: 15px;
-    background-color: #fefefc;
 }
 .message .markdown-body {
     max-width: 100%;
@@ -109,11 +109,25 @@ section,
 }
 .message .markdown-body h1:first-of-type {
     margin: 0 0 12px 0;
-    padding: 0;
-    text-align: left;
+    padding-left: 48px;
+    position: relative;
     font-size: 1.5rem;
     line-height: 1.3;
-    border-bottom: 2px solid #000000;
+}
+.message .markdown-body h1:first-of-type::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    border: 2px solid #000000;
+    border-radius: 50%;
+    background-image: url('https://github.com/toolexyforyou.png');
+    background-size: cover;
+    background-position: center;
 }
 .message .markdown-body > *:not(h1:first-of-type) {
     background: none;
