@@ -38,10 +38,6 @@ header {
     max-width: 600px;
     width: 100%;
     box-sizing: border-box;
-    background-image:
-        linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
-    background-size: 20px 20px;
 }
 header h1 {
     font-size: 2.6rem;
@@ -86,7 +82,7 @@ header nav a:hover,
 }
 section,
 .markdown-body,
-.home-menu {
+.message {
     background-color: #fefefc;
     border: 2px solid #000000;
     border-radius: 15px;
@@ -97,50 +93,33 @@ section,
     text-align: left;
     display: block;
     box-sizing: border-box;
-    background-image:
-        linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
-    background-size: 20px 20px;
 }
 .message {
-    display: block;
-    margin: 16px auto;
-    width: 100%;
-    max-width: 650px;
-    padding: 12px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 12px;
     border: 2px solid #000000;
-    border-radius: 18px;
-    box-sizing: border-box;
+    border-radius: 15px;
     background-color: #fefefc;
 }
 .message .markdown-body {
+    max-width: 100%;
     width: 100%;
-    max-width: none;
-    padding: 20px;
-    border: 2px solid #000000;
-    border-radius: 14px;
-    box-sizing: border-box;
-    background-color: #fefefc;
-    background-image: none;
+    margin: 0 auto;
 }
 .message .markdown-body h1:first-of-type {
-    margin: 0;
-    padding: 0 20px 12px 20px;
+    margin: 0 0 12px 0;
+    padding: 0;
+    text-align: left;
     font-size: 1.5rem;
     line-height: 1.3;
-    text-align: left;
     border-bottom: 2px solid #000000;
-    margin-left: -20px;
-    margin-right: -20px;
 }
 .message .markdown-body > *:not(h1:first-of-type) {
     background: none;
     border: none;
     padding: 0;
     margin: 0 0 1.5em 0;
-}
-.message {
-    background-image: none;
 }
 h2 {
     font-size: 1.5rem;
