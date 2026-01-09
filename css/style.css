@@ -9,7 +9,7 @@ body {
     color: #000000;
     font-family: 'Space Mono', monospace;
     line-height: 1.25;
-    max-width: 600px;
+    max-width: 750px;
     width: 90%;
     margin: 0 auto;
     padding: 24px 0;
@@ -81,7 +81,8 @@ header nav a:hover,
     fill: currentColor;
 }
 section,
-.markdown-body {
+.markdown-body,
+.message {
     background-color: #fefefc;
     border: 2px solid #000000;
     border-radius: 15px;
@@ -117,6 +118,9 @@ section,
     display: grid;
     grid-template-rows: auto 1fr;
     gap: 12px;
+    background-color: #fefefc;
+    border: 2px solid #000000;
+    border-radius: 15px;
 }
 .message .markdown-body {
     max-width: 100%;
@@ -280,15 +284,18 @@ input:focus-visible {
     }
     .message {
         max-width: 100%;
-        width: 90%;
+        width: 100%;
     }
     .outer-border {
         max-width: 100%;
-        width: 90%;
+        width: 100%;
+        margin: 16px 0;
     }
     .inner-border {
-        max-width: 95%;
+        max-width: 100%;
         width: 100%;
+        padding: 16px;
+        margin: 0;
     }
     .title-container {
         width: 90%;
