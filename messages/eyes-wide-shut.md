@@ -9,11 +9,11 @@ her pupils blackened,
 and her eyebrows raised up.
 
 It started at 
-the casino entrance,
+the blinding casino entrance,
 where she was shit out of luck.
 
 It started on 
-the glittery blackjack table,
+the blackjack table,
 where she spent her last buck.
 
 It started in 
