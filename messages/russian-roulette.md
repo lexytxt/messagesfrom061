@@ -14,4 +14,4 @@ it's my teeth that I'll bite,
 
 saying, "Go ahead, babe, 
 disappoint me,” 
-because you aim it just right.
+because your aim is just right.
