@@ -1,8 +1,8 @@
 # Drunk dial
 
 I hate  
-to keep on
-hitting your line
+it when I 
+hit your line
 
 asking, “Do you still feel me, 
 at least, 
