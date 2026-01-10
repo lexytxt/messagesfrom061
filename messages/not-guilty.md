@@ -15,7 +15,7 @@ where she crashed
 straight into 
 that leaking faucet.
 
-she cried, 
+She cried, 
 “I’m sick and tired 
 of fucking up everything 
 good that I’ve got.”
