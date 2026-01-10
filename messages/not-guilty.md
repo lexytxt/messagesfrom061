@@ -12,7 +12,7 @@ of her lashes.
 
 I rushed to her stall, 
 where she started to bawl,
-“I'm a total fuck up, 
+“I fuck everything up, 
 it’s all my damn fault.”
 
 But I didn’t never—
