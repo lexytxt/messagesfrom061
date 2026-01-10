@@ -29,7 +29,7 @@
             if (contentContainer) contentContainer.innerHTML = `<h1>${title}</h1>` + marked.parse(lines.join('\n'));
             const index = messages.indexOf(file);
             if (paginationContainer && index >= 0) {
-                const prevLink = index > 0 ? `<a href="message.html?file=${messages[index-1]}">← Previous</a>` : `<span style="opacity:0.5;">← Previous</span>`;
+                const prevLink = index > 0 ? `<a href="message.html?file=${messages[index-1]}">← Back</a>` : `<span style="opacity:0.5;">← Back</span>`;
                 const nextLink = index < messages.length-1 ? `<a href="message.html?file=${messages[index+1]}">Next →</a>` : `<span style="opacity:0.5;">Next →</span>`;
                 paginationContainer.innerHTML = `${prevLink}${nextLink}`;
             }
