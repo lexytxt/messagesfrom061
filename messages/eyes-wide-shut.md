@@ -20,7 +20,7 @@ parking lot,
 where she dozed off
 in his truck.
 
-I just want you to know
-it didn’t start at the doctor
+But it didn’t start 
+in that doctor’s office
 when her back slid down
 the coldest vinyl couch.
