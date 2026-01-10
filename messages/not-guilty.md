@@ -10,11 +10,6 @@ the jet-black mascara
 gushing out 
 of her lashes.
 
-I rushed to her stall, 
-where she started to bawl,
-“I fuck everything up, 
-it’s all my damn fault.”
-
 But I didn’t never—
 I wouldn’t ever—
 force her 
