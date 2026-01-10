@@ -193,6 +193,23 @@ h2 {
     margin: 0 6px;
     font-family: 'Space Mono', monospace;
 }
+#message-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 16px 0;
+    flex-wrap: wrap;
+}
+#message-pagination a:hover,
+#message-pagination a:focus {
+    background-color: #ffffff;
+    opacity: 0.8;
+}
+#message-pagination span {
+    display: inline-block;
+    opacity: 0.5;
+}
 #share-btn {
     padding: 8px 16px;
 }
