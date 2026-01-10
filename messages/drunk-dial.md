@@ -1,6 +1,6 @@
 # Drunk dial
 
-I hate it when I hit your line
+I hate when I hit your line
 asking, “Do you still 
 feel me, at least, some of the time?”
 
