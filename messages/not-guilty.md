@@ -12,8 +12,8 @@ of her lashes.
 
 I rushed to the corner
 where she crashed
-straight into 
-that leaking faucet.
+straight into that 
+leaking faucet.
 
 She cried, 
 “I’m sick and tired 
