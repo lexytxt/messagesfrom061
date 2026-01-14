@@ -14,10 +14,10 @@ where the neon sign blinked,
 
 to say,
 “She’ll have a daiquiri,”
-knowing my favorite drink.
+remembering my favorite drink.
 
 So I dove headfirst
-into the glass
+into that glass
 of sweetness on my tongue.
 
 Before you kissed it off
