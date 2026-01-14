@@ -18,8 +18,8 @@ rembering my favorite drink.
 
 So I dove headfirst
 into the glass
-of strawberry sweetness on my tongue,
+of sweetness on my tongue.
 
-before you kissed it off
+Before you kissed it off
 at closing time
 to the sound of the track: “I’m Sprung”.
