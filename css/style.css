@@ -151,6 +151,10 @@ section,
     margin: 0 0 1.5em 0;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+}
+
 h2 {
     font-size: 1.5rem;
     margin-bottom: 14px;
@@ -244,6 +248,7 @@ h2 {
 .profile-photo {
     width: 80px;
     height: 80px;
+    border: 5px solid #000;
     border-radius: 15px;
     object-fit: cover;
     display: block;
@@ -259,6 +264,10 @@ h2 {
     background-color: #fefefc;
     color: #000000;
     transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+p em:first-child {
+    display: none;
 }
 
 footer {
