@@ -247,7 +247,10 @@ h2 {
 }
 
 .profile-container {
-    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 16px;
 }
 
 .profile-photo {
@@ -256,11 +259,11 @@ h2 {
     border: 5px solid #000;
     border-radius: 50%;
     object-fit: cover;
-    float: left;
-    margin: 0 16px 16px 0;
+    flex-shrink: 0;
 }
 
 .about-text {
+    flex: 1 1 200px;
     text-align: left;
 }
 
