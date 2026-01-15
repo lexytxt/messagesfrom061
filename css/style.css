@@ -40,10 +40,10 @@ header {
     text-align: center;
     max-width: 600px;
     width: 100%;
-    border: 4px solid #000000;
+    border: 2px solid #000000;
     border-radius: 10px;
+    background-image: linear-gradient(to top, rgba(255,255,255,0.25), transparent 50%);
     box-shadow: inset 0 2px 0 rgba(255,255,255,0.3);
-    background-image: linear-gradient(to top, rgba(255,255,255,0.15), transparent 50%);
 }
 
 header h1 {
@@ -65,11 +65,11 @@ header nav a,
     text-decoration: none;
     color: #000000;
     background-color: #fefefc;
-    transition: opacity 0.2s ease, background-color 0.2s ease;
-    border: 4px solid #000000;
+    border: 2px solid #000000;
     border-radius: 10px;
+    background-image: linear-gradient(to top, rgba(255,255,255,0.25), transparent 50%);
     box-shadow: inset 0 2px 0 rgba(255,255,255,0.3);
-    background-image: linear-gradient(to top, rgba(255,255,255,0.15), transparent 50%);
+    transition: opacity 0.2s ease, background-color 0.2s ease;
 }
 
 header nav a:hover,
@@ -79,7 +79,7 @@ header nav a:hover,
 #message-list a:hover,
 .category-list a:hover {
     opacity: 0.8;
-    background-image: linear-gradient(to top, rgba(255,255,255,0.25), transparent 50%);
+    background-image: linear-gradient(to top, rgba(255,255,255,0.35), transparent 50%);
 }
 
 #home-button {
@@ -90,9 +90,6 @@ header nav a:hover,
     height: 44px;
     padding: 0;
     border-radius: 50%;
-    border: 4px solid #000000;
-    box-shadow: inset 0 2px 0 rgba(255,255,255,0.3);
-    background-image: linear-gradient(to top, rgba(255,255,255,0.15), transparent 50%);
 }
 
 #home-button svg {
@@ -102,26 +99,32 @@ header nav a:hover,
 }
 
 section,
-.outer-border {
-    padding: 6px;
+.markdown-body,
+.message,
+.outer-border,
+.inner-border {
+    padding: 20px;
     margin: 16px auto;
     display: block;
-    max-width: 750px;
+    max-width: 700px;
     width: 100%;
     text-align: left;
-    background-color: #000000;
-    border: 4px solid #000000;
-    border-radius: 15px;
+    background-color: #fefefc;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    background-image: linear-gradient(to top, rgba(255,255,255,0.25), transparent 50%);
+    box-shadow: inset 0 2px 0 rgba(255,255,255,0.3);
 }
 
-.inner-border,
-.message {
-    padding: 20px;
-    margin: 0;
-    width: 100%;
-    background-color: #fefefc;
-    border: 3px solid #000000;
-    border-radius: 10px;
+.outer-border {
+    padding: 0;
+    max-width: 750px;
+}
+
+.inner-border {
+    padding: 16px;
+    max-width: 730px;
+    margin: 0 auto;
 }
 
 .message {
@@ -134,13 +137,13 @@ section,
     width: 100%;
     margin: 0 auto;
     border-radius: 10px;
-    padding: 12px;
-    background-color: #fefefc;
+    padding: 8px;
     background-image:
-        linear-gradient(to right, rgba(0,0,0,0.05) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(0,0,0,0.05) 1px, transparent 1px);
-    background-size: 20px 20px;
-    border: 4px solid #000000;
+        linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px),
+        linear-gradient(to top, rgba(255,255,255,0.25), transparent 50%);
+    border: 2px solid #000000;
+    box-shadow: inset 0 2px 0 rgba(255,255,255,0.3);
 }
 
 .message .markdown-body h1:first-of-type {
@@ -173,8 +176,7 @@ h2 {
     margin-bottom: 16px;
     font-size: 1rem;
     border-radius: 8px;
-    border: 2px solid #CE2029;
-    font-family: 'Space Mono', monospace;
+    border: 1px solid #CE2029;
 }
 
 #message-list {
@@ -193,7 +195,9 @@ h2 {
     color: #000000;
     font-size: 1rem;
     text-align: left;
-    border: 4px solid #000000;
+    border: 2px solid #000000;
+    background-image: linear-gradient(to top, rgba(255,255,255,0.25), transparent 50%);
+    box-shadow: inset 0 2px 0 rgba(255,255,255,0.3);
 }
 
 #message-pagination {
@@ -217,7 +221,10 @@ h2 {
     font-family: 'Space Mono', monospace;
     background-color: #fefefc;
     color: #000000;
-    border: 4px solid #000000;
+    border: 2px solid #000000;
+    box-shadow: inset 0 2px 0 rgba(255,255,255,0.3);
+    background-image: linear-gradient(to top, rgba(255,255,255,0.25), transparent 50%);
+    transition: opacity 0.2s ease, background-color 0.2s ease;
 }
 
 #message-pagination a:hover,
@@ -226,10 +233,17 @@ h2 {
     opacity: 0.8;
 }
 
+#message-pagination span[style] {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
 #share-btn {
     padding: 8px 16px;
-    border: 4px solid #000000;
+    border: 2px solid #000000;
     border-radius: 10px;
+    box-shadow: inset 0 2px 0 rgba(255,255,255,0.3);
+    background-image: linear-gradient(to top, rgba(255,255,255,0.25), transparent 50%);
 }
 
 p {
@@ -284,7 +298,20 @@ p {
     object-fit: cover;
     display: block;
     margin: 0 auto 16px auto;
-    border: 4px solid #000000;
+    border: 2px solid #000000;
+    box-shadow: inset 0 2px 0 rgba(255,255,255,0.3);
+    background-image: linear-gradient(to top, rgba(255,255,255,0.25), transparent 50%);
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    box-shadow: inset 0 2px 0 rgba(255,255,255,0.3);
+    background-image: linear-gradient(to top, rgba(255,255,255,0.25), transparent 50%);
 }
 
 .category-list a {
@@ -297,7 +324,18 @@ p {
     font-size: 1rem;
     text-align: left;
     margin-bottom: 8px;
-    border: 4px solid #000000;
+    transition: opacity 0.2s ease, background-color 0.2s ease;
+    border: 2px solid #000000;
+    box-shadow: inset 0 2px 0 rgba(255,255,255,0.3);
+    background-image: linear-gradient(to top, rgba(255,255,255,0.25), transparent 50%);
+}
+
+.category-list a:hover {
+    opacity: 0.8;
+}
+
+.category-list a:last-child {
+    margin-bottom: 0;
 }
 
 footer {
@@ -307,11 +345,28 @@ footer {
     text-align: center;
 }
 
+a:focus-visible,
+input:focus-visible {
+    outline: 2px solid #000000;
+    outline-offset: 3px;
+}
+
 @media (max-width: 700px) {
-    section, .outer-border {
-        padding: 4px;
+    section {
+        padding: 18px 14px;
     }
-    .inner-border, .message {
-        padding: 12px;
+    #message-list {
+        grid-template-columns: 1fr;
+    }
+    .message, .outer-border, .inner-border, .title-container, section, .markdown-body {
+        max-width: 100%;
+        width: 100%;
+    }
+    .outer-border {
+        margin: 16px 0;
+    }
+    .inner-border {
+        padding: 16px;
+        margin: 0;
     }
 }
