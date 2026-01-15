@@ -127,10 +127,7 @@ section,
     margin: 0 auto;
     border-radius: 10px;
     padding: 8px;
-    background-image:
-        linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
-    background-size: 20px 20px;
+    background-color: #fefefc;
     border: 3px solid #000000;
     box-shadow: inset 0 2px 0 rgba(255,255,255,0.3);
 }
@@ -200,6 +197,16 @@ h2 {
     margin-bottom: 0;
 }
 
+#message-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    margin: 16px 0;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
 #message-pagination a,
 #message-pagination span,
 #share-btn,
@@ -221,6 +228,17 @@ h2 {
     font-family: 'Space Mono', monospace;
     background-color: #fefefc;
     color: #000000;
+}
+
+#message-pagination a:hover,
+#message-pagination a:focus {
+    background-color: #ffffff;
+    opacity: 0.8;
+}
+
+#message-pagination span[style] {
+    opacity: 0.5;
+    pointer-events: none;
 }
 
 .profile-photo {
