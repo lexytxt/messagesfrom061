@@ -10,10 +10,10 @@ her errors
 out
 like paper dolls.
 
-The realization 
-slapped her across the face:
-“perfect”doesn’t even exist
-but done does.
+But when
+“perfect”doesn’t 
+even exist
+and done does.
 
 So she throws
 out
