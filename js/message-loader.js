@@ -20,11 +20,16 @@
             if (categories[m.category]) categories[m.category].push(m.file);
         });
 
-        for (const key in categories) {
-            categories[key].sort((a,b) => a.localeCompare(b));
-        }
+        categories["Confessional"].sort();
+        categories["Postmodern"].sort();
+        categories["Symbolist"].sort();
 
-        const allMessages = [...categories["Confessional"], ...categories["Postmodern"], ...categories["Symbolist"]];
+        const allMessages = [
+            ...categories["Confessional"],
+            ...categories["Postmodern"],
+            ...categories["Symbolist"]
+        ];
+
         const index = allMessages.indexOf(file);
 
         const markdownRes = await fetch(`./messages/${file}`);
