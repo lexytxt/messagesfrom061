@@ -6,7 +6,7 @@
     const shareBtn = document.getElementById('share-btn');
 
     try {
-        const messagesRes = await fetch('./messages/messages.json');
+        const messagesRes = await fetch('./js/messages.json');
         if (!messagesRes.ok) throw new Error('Could not load messages list');
         const messages = await messagesRes.json();
 
