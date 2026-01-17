@@ -248,6 +248,7 @@ h2 {
 
 .profile-container {
     display: block;
+    padding: 16px 20px;
 }
 
 .profile-photo {
@@ -257,12 +258,13 @@ h2 {
     border: 3px solid #000;
     border-radius: 50%;
     object-fit: cover;
-    margin: 0 0 16px 16px;
+    margin: 0 0 20px 20px;
 }
 
 .about-text {
     overflow: hidden;
     text-align: left;
+    padding: 8px 0;
 }
 
 .social-link {
