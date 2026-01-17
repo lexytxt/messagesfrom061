@@ -12,13 +12,13 @@ with the
 glossy finish
 to match.
 
-Maybe
+Maybe,
 when I'm
 laminated,
 
 I'll be as
-important to you as that 
-off-white piece of paper.
+important to you 
+as that off-white piece of paper.
 
 And I won't
 have to curl at 
