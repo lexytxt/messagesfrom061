@@ -12,21 +12,17 @@ with the
 glossy finish
 to match.
 
-I know
-if I were
+Maybe
+when I'm
 laminated,
 
-I’d be as
-important to you
-as that off-white piece of paper.
+I'll be as
+important to you as that 
+off-white piece of paper.
 
-I know
-if I were
-laminated,
-
-I wouldn’t
-have to
-curl at the edges of your gaze.
+And I won't
+have to curl at 
+the edges of your gaze.
 
 So, pretty please,
 laminate me
