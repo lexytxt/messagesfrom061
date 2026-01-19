@@ -25,6 +25,11 @@
         "category": "Symbolist"
     },
     {
+        "file": "press-r.md",
+        "title": "Press R",
+        "category": "Confessional"
+    },
+    {
         "file": "russian-roulette.md",
         "title": "Russian roulette",
         "category": "Confessional"
@@ -38,10 +43,5 @@
         "file": "the-last-bite.md",
         "title": "The last bite",
         "category": "Symbolist"
-    },
-    {
-        "file": "the-party.md",
-        "title": "The party",
-        "category": "Confessional"
     }
 ]
