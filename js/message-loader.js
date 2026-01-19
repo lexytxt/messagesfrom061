@@ -5,8 +5,13 @@
     const paginationContainer = document.getElementById('message-pagination');
     const shareBtn = document.getElementById('share-btn');
 
+    if (!contentContainer) return;
+
+    contentContainer.innerHTML = '<p>Loading message...</p>';
+
     if (!file) {
-        if (contentContainer) contentContainer.innerHTML = '<p>No message specified.</p>';
+        contentContainer.innerHTML = '<p>No message specified.</p>';
+        if (paginationContainer) paginationContainer.innerHTML = '';
         return;
     }
 
@@ -15,53 +20,69 @@
         if (!res.ok) throw new Error('Could not load messages list');
         const messagesData = await res.json();
 
-        const categories = { "Confessional": [], "Postmodern": [], "Symbolist": [] };
+        const categories = {};
         messagesData.forEach(m => {
-            if (categories[m.category]) categories[m.category].push(m.file);
+            if (!categories[m.category]) categories[m.category] = [];
+            categories[m.category].push(m.file);
         });
 
         for (const key in categories) {
-            categories[key].sort((a,b) => a.localeCompare(b));
+            categories[key].sort((a, b) => a.localeCompare(b));
         }
 
-        const allMessages = [...categories["Confessional"], ...categories["Postmodern"], ...categories["Symbolist"]];
+        const allMessages = Object.values(categories).flat();
         const index = allMessages.indexOf(file);
 
-        const markdownRes = await fetch(`./messages/${file}`);
-        if (!markdownRes.ok) throw new Error('File not found');
-        const md = await markdownRes.text();
+        if (index < 0) throw new Error('Message not found');
 
-        if (contentContainer) {
-            contentContainer.innerHTML = marked.parse(md, { breaks: true });
+        if (!window._messageCache) window._messageCache = {};
+        let md;
+        if (window._messageCache[file]) {
+            md = window._messageCache[file];
+        } else {
+            const markdownRes = await fetch(`./messages/${file}`);
+            if (!markdownRes.ok) throw new Error('File not found');
+            md = await markdownRes.text();
+            window._messageCache[file] = md;
         }
 
-        if (paginationContainer && index >= 0) {
-            const prevLink = index > 0 
-                ? `<a href="message.html?file=${allMessages[index-1]}">← Back</a>` 
+        contentContainer.innerHTML = marked.parse(md, { breaks: true });
+
+        if (paginationContainer) {
+            const prevLink = index > 0
+                ? `<a href="message.html?file=${allMessages[index-1]}">← Back</a>`
                 : `<span style="opacity:0.5;">← Back</span>`;
-            const nextLink = index < allMessages.length-1 
-                ? `<a href="message.html?file=${allMessages[index+1]}">Next →</a>` 
+            const nextLink = index < allMessages.length - 1
+                ? `<a href="message.html?file=${allMessages[index+1]}">Next →</a>`
                 : `<span style="opacity:0.5;">Next →</span>`;
             paginationContainer.innerHTML = `<div style="display:flex; justify-content: space-between; gap: 40px;">${prevLink}${nextLink}</div>`;
         }
 
         if (shareBtn) {
-            shareBtn.addEventListener('click', async () => {
+            shareBtn.onclick = async () => {
                 if (navigator.share) {
-                    try { await navigator.share({ title: file.replace('.md',''), text: "Check out this message from Messages from 061.", url: window.location.href }); }
-                    catch {}
-                } else { alert("Copy this URL:\n" + window.location.href); }
-            });
+                    try {
+                        await navigator.share({
+                            title: file.replace('.md', ''),
+                            text: "Check out this message from Messages from 061.",
+                            url: window.location.href
+                        });
+                    } catch {}
+                } else {
+                    alert("Copy this URL:\n" + window.location.href);
+                }
+            };
         }
 
         document.addEventListener('keydown', e => {
             if (index < 0) return;
             if (e.key === 'ArrowLeft' && index > 0) window.location.href = `message.html?file=${allMessages[index-1]}`;
-            if (e.key === 'ArrowRight' && index < allMessages.length-1) window.location.href = `message.html?file=${allMessages[index+1]}`;
+            if (e.key === 'ArrowRight' && index < allMessages.length - 1) window.location.href = `message.html?file=${allMessages[index+1]}`;
         });
 
-    } catch {
-        if (contentContainer) contentContainer.innerHTML = '<p>Could not load message.</p>';
+    } catch (err) {
+        contentContainer.innerHTML = '<p>Could not load message.</p>';
         if (paginationContainer) paginationContainer.innerHTML = '';
+        console.error(err);
     }
 })();
