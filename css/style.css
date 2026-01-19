@@ -40,7 +40,7 @@ header {
     box-shadow: inset 0 2px 0 rgba(255,255,255,0.3);
     padding: 20px;
     display: block;
-    margin: 16px auto;
+    margin: 20px auto;
     max-width: 600px;
     width: 100%;
 }
@@ -103,7 +103,7 @@ section,
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin: 12px 0;
+    margin: 20px 0; 
     opacity: 0;
     transform: translateY(10px);
     animation: slideIn 0.3s ease forwards;
@@ -134,12 +134,14 @@ section,
     content: "";
     position: absolute;
     top: 12px;
-    left: -12px;
-    width: 0;
-    height: 0;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-right: 12px solid #fefefc;
+    left: -15px;
+    width: 15px;
+    height: 20px;
+    background-color: #fefefc;
+    border: 3px solid #000000;
+    border-radius: 0 20px 20px 0;
+    transform: rotate(0deg);
+    box-sizing: border-box;
 }
 
 @keyframes slideIn {
@@ -147,12 +149,6 @@ section,
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-.message .markdown-body h1:first-of-type {
-    margin: 0 0 12px 0;
-    font-size: 1.5rem;
-    line-height: 1.3;
 }
 
 .message .markdown-body h1:first-of-type::before {
