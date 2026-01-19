@@ -1,4 +1,4 @@
-# I hate you not
+# Press "R"
 
 I hate you,
 I hate you not,
@@ -21,7 +21,7 @@ frantically pressing “R”
 on the operating panel.
 
 Only to book it
-to a rooftop bar
+to the rooftop bar
 filled with people
 I haven’t met:
 
