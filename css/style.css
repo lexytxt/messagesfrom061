@@ -106,13 +106,11 @@ section,
     align-items: flex-start;
     margin: 20px 0;
     width: 100%;
-    border: none;
 }
 
 .message .markdown-body {
     position: relative;
-    width: 100%;
-    padding: 18px 20px 18px 20px;
+    padding: 18px 20px;
     background-color: #fefefc;
     color: #000000;
     line-height: 1.5;
@@ -126,27 +124,15 @@ section,
 .message .markdown-body::before {
     content: "";
     position: absolute;
-    top: -3px;
-    left: -18px;
-    width: 0;
-    height: 0;
-    border-top: 12px solid transparent;
-    border-bottom: 12px solid transparent;
-    border-right: 18px solid #fefefc;
-    z-index: 1;
-}
-
-.message .markdown-body::after {
-    content: "";
-    position: absolute;
-    top: -3px;
-    left: -18px;
-    width: 0;
-    height: 0;
-    border-top: 12px solid transparent;
-    border-bottom: 12px solid transparent;
-    border-right: 18px solid #000000;
-    z-index: 0;
+    top: 0;
+    left: -12px;
+    width: 12px;
+    height: 24px;
+    border-left: 3px solid #000000;
+    border-bottom: 3px solid #000000;
+    transform: rotate(-45deg);
+    transform-origin: top left;
+    background-color: transparent;
 }
 
 .message .markdown-body h1:first-of-type::before {
