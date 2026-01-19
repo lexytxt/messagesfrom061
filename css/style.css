@@ -65,7 +65,7 @@ header nav a,
 #share-btn,
 .social-link {
     display: inline-block;
-    padding: 6px 12px;
+    padding: 10px 16px;
     margin: 0 6px;
     font-family: 'Space Mono', monospace;
     cursor: pointer;
@@ -115,7 +115,7 @@ header nav a:active,
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 6px 12px;
+    padding: 10px 16px;
     border-radius: 10px;
     width: auto;
     height: auto;
@@ -135,6 +135,7 @@ section,
     box-shadow: inset 0 2px 0 rgba(255,255,255,0.3);
     background-color: #fefefc;
     margin: 20px 0;
+    padding: 20px;
 }
 
 .message {
@@ -149,7 +150,7 @@ section,
 .message .markdown-body {
     position: relative;
     width: 100%;
-    padding: 18px 20px;
+    padding: 20px;
     background-color: #fefefc;
     color: #000000;
     line-height: 1.5;
@@ -241,7 +242,7 @@ h2 {
 
 #search-bar {
     width: 100%;
-    padding: 10px 14px;
+    padding: 12px 16px;
     margin-bottom: 16px;
     font-size: 1rem;
     border-radius: 8px;
@@ -253,6 +254,7 @@ h2 {
     grid-template-columns: 1fr;
     gap: 12px;
     margin: 20px 0;
+    padding: 0;
 }
 
 #message-list a,
@@ -306,7 +308,7 @@ h2 {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 6px 12px;
+    padding: 10px 16px;
     text-decoration: none;
     font-family: 'Space Mono', monospace;
     background-color: #fefefc;
@@ -344,7 +346,7 @@ h2 {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 8px 16px;
+    padding: 10px 16px;
     text-decoration: none;
     background-color: #fefefc;
     color: #000000;
@@ -403,10 +405,6 @@ input:focus-visible {
         font-size: 0.85rem;
     }
 
-    #message-list {
-        padding: 0;
-    }
-
     #message-list a,
     .category-list a {
         padding: 16px 20px;
@@ -434,6 +432,7 @@ input:focus-visible {
 @media (min-width: 601px) and (max-width: 900px) {
     body {
         width: 90%;
+        padding: 20px 0;
     }
 
     header {
@@ -482,6 +481,7 @@ input:focus-visible {
 @media (min-width: 901px) and (max-width: 1200px) {
     body {
         width: 85%;
+        padding: 24px 0;
     }
 
     header {
@@ -502,6 +502,7 @@ input:focus-visible {
 
     .message .markdown-body {
         font-size: 1rem;
+        padding: 20px;
     }
 
     .message .markdown-body h1 {
