@@ -112,7 +112,7 @@ section,
 .message .markdown-body {
     position: relative;
     width: 100%;
-    padding: 18px 20px;
+    padding: 18px 20px 18px 20px;
     background-color: #fefefc;
     color: #000000;
     line-height: 1.5;
@@ -126,25 +126,25 @@ section,
 .message .markdown-body::before {
     content: "";
     position: absolute;
-    top: 15px;
+    top: -3px;
     left: -18px;
     width: 0;
     height: 0;
     border-top: 12px solid transparent;
     border-bottom: 12px solid transparent;
-    border-right: 15px solid #fefefc;
+    border-right: 18px solid #fefefc;
     z-index: 1;
 }
 
 .message .markdown-body::after {
     content: "";
     position: absolute;
-    top: 15px;
+    top: -3px;
     left: -18px;
     width: 0;
     height: 0;
-    border-top: 15px solid transparent;
-    border-bottom: 15px solid transparent;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
     border-right: 18px solid #000000;
     z-index: 0;
 }
