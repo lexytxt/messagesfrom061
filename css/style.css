@@ -102,30 +102,51 @@ section,
 
 .message {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: flex-start;
     margin: 20px 0;
     width: 100%;
-}
-
-.message .tail {
-    font-family: 'Space Mono', monospace;
-    color: #000000;
-    font-size: 1.5rem;
-    line-height: 1;
-    padding-right: 4px;
+    border: none;
 }
 
 .message .markdown-body {
-    flex: 1;
+    position: relative;
+    width: 100%;
     padding: 18px 20px;
     background-color: #fefefc;
     color: #000000;
     line-height: 1.5;
     font-size: 1rem;
+    word-wrap: break-word;
     border-radius: 20px;
     border: 3px solid #000000;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.message .markdown-body::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: -15px;
+    width: 0;
+    height: 0;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-right: 15px solid #fefefc;
+    z-index: 1;
+}
+
+.message .markdown-body::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: -18px;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 18px solid #000000;
+    z-index: 0;
 }
 
 .message .markdown-body h1:first-of-type::before {
