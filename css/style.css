@@ -126,27 +126,25 @@ section,
 .message .markdown-body::before {
     content: "";
     position: absolute;
-    top: 3px; /* aligns top of arrow with bubble */
-    left: -15px;
+    top: 0;
+    left: -18px;
     width: 0;
     height: 0;
-    border-top: 12px solid transparent;
-    border-bottom: 12px solid transparent;
-    border-right: 15px solid #fefefc;
-    z-index: 1;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-right: 18px solid #fefefc;
 }
 
 .message .markdown-body::after {
     content: "";
     position: absolute;
-    top: 0; /* aligns top of black border with bubble */
-    left: -18px;
+    top: 0;
+    left: -21px;
     width: 0;
     height: 0;
-    border-top: 15px solid transparent;
-    border-bottom: 15px solid transparent;
-    border-right: 18px solid #000000;
-    z-index: 0;
+    border-top: 28px solid transparent;
+    border-bottom: 28px solid transparent;
+    border-right: 21px solid #000000;
 }
 
 .message .markdown-body h1:first-of-type::before {
