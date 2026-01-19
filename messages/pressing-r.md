@@ -1,4 +1,4 @@
-# Press "R"
+# Pressing "R"
 
 I hate you,
 I hate you not,
