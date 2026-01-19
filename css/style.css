@@ -105,9 +105,6 @@ section,
     flex-direction: column;
     align-items: flex-start;
     margin: 20px 0;
-    opacity: 0;
-    transform: translateY(10px);
-    animation: slideIn 0.3s ease forwards;
     width: 100%;
 }
 
