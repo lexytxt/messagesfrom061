@@ -41,55 +41,57 @@
     </footer>
 
     <script>
-        (async function() {
-            const searchBar = document.getElementById('search-bar');
+    (function () {
+        const searchBar = document.getElementById('search-bar');
 
-            try {
-                const res = await fetch('./js/messages.json');
-                if (!res.ok) throw new Error();
-                const messages = await res.json();
+        fetch('./js/messages.json')
+            .then(r => {
+                if (!r.ok) throw new Error();
+                return r.json();
+            })
+            .then(messages => {
+                const categories = {};
 
-                const categories = {
-                    Confessional: [],
-                    Symbolist: []
-                };
-
-                messages.forEach(msg => {
-                    if (categories[msg.category]) {
-                        categories[msg.category].push(msg);
+                messages.forEach(m => {
+                    if (!categories[m.category]) {
+                        categories[m.category] = [];
                     }
+                    categories[m.category].push(m);
                 });
 
-                for (const key in categories) {
-                    categories[key].sort((a, b) => a.title.localeCompare(b.title));
-                }
+                Object.values(categories).forEach(list => {
+                    list.sort((a, b) => a.title.localeCompare(b.title));
+                });
 
-                const createLinks = (list, containerId) => {
-                    const container = document.getElementById(containerId);
-                    list.forEach(msg => {
+                Object.entries(categories).forEach(([category, list]) => {
+                    const container = document.getElementById(
+                        `${category.toLowerCase()}-messages`
+                    );
+                    if (!container) return;
+
+                    list.forEach(m => {
                         const a = document.createElement('a');
-                        a.href = `message.html?file=${msg.file}`;
-                        a.textContent = msg.title;
+                        a.href = `message.html?file=${m.file}`;
+                        a.textContent = m.title;
                         container.appendChild(a);
                     });
-                };
-
-                createLinks(categories.Confessional, 'confessional-messages');
-                createLinks(categories.Symbolist, 'symbolist-messages');
+                });
 
                 searchBar.addEventListener('input', () => {
-                    const query = searchBar.value.toLowerCase();
-                    document.querySelectorAll('.category-list a').forEach(link => {
-                        link.style.display = link.textContent.toLowerCase().includes(query) ? 'block' : 'none';
+                    const q = searchBar.value.toLowerCase();
+                    document.querySelectorAll('.category-list a').forEach(a => {
+                        a.style.display = a.textContent.toLowerCase().includes(q)
+                            ? 'block'
+                            : 'none';
                     });
                 });
-
-            } catch {
+            })
+            .catch(() => {
                 document.querySelectorAll('.category-list').forEach(c => {
-                    c.innerHTML = '<p>Could not load messages.</p>';
+                    c.textContent = 'Could not load messages.';
                 });
-            }
-        })();
+            });
+    })();
     </script>
 </body>
 </html>
