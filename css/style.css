@@ -122,6 +122,7 @@ section,
     align-items: flex-start;
     width: 100%;
     border: none;
+    visibility: hidden;
     transform: translateX(-100%);
     opacity: 0;
     animation: slideIn 0.6s ease forwards;
@@ -305,6 +306,7 @@ input:focus-visible {
 
 @keyframes slideIn {
     to {
+        visibility: visible;
         transform: translateX(0);
         opacity: 1;
     }
