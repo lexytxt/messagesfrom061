@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Messages</title>
+    <title>Message</title>
+    <meta name="description" content="A message from Messages from 061.">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -12,22 +13,20 @@
             <h1>Messages from 061</h1>
         </div>
         <nav>
-            <a href="index.html" id="home-button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+            <a href="index.html" id="home-button" aria-label="Home">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
                 </svg>
             </a>
         </nav>
     </header>
 
-    <main>
+    <main id="main">
+        <article class="message">
+            <div id="message-content" class="markdown-body"></div>
+        </article>
 
-        <section class="message">
-    <div id="message-content" class="markdown-body"></div>
-        </section>
-        
-        <div id="message-pagination" style="text-align:center; margin:24px 0;"></div>
-        
+        <div id="message-pagination"></div>
     </main>
 
     <footer>
