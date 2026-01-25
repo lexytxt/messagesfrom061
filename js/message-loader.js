@@ -1,9 +1,9 @@
-(async function() {
+(async function () {
     const params = new URLSearchParams(window.location.search);
     const file = params.get('file');
+
     const contentContainer = document.getElementById('message-content');
     const paginationContainer = document.getElementById('message-pagination');
-    const shareBtn = document.getElementById('share-btn');
 
     if (!contentContainer) return;
 
@@ -17,33 +17,42 @@
 
     try {
         const res = await fetch('./js/messages.json');
-        if (!res.ok) throw new Error('Could not load messages list');
+        if (!res.ok) throw new Error();
         const messagesData = await res.json();
 
-        const categories = {};
+        const categories = {
+            Confessional: [],
+            Symbolist: []
+        };
+
+        let currentCategory = null;
+
         messagesData.forEach(m => {
-            if (m.category === "Confessional" || m.category === "Symbolist") {
-                if (!categories[m.category]) categories[m.category] = [];
+            if (categories[m.category]) {
                 categories[m.category].push(m.file);
+                if (m.file === file) currentCategory = m.category;
             }
         });
 
-        for (const key in categories) {
-            categories[key].sort((a, b) => a.localeCompare(b));
-        }
+        if (!currentCategory) throw new Error();
 
-        const allMessages = Object.values(categories).flat();
-        const index = allMessages.indexOf(file);
+        Object.keys(categories).forEach(cat => {
+            categories[cat].sort((a, b) => a.localeCompare(b));
+        });
 
-        if (index < 0) throw new Error('Message not found');
+        const categoryMessages = categories[currentCategory];
+        const index = categoryMessages.indexOf(file);
+
+        if (index < 0) throw new Error();
 
         if (!window._messageCache) window._messageCache = {};
+
         let md;
         if (window._messageCache[file]) {
             md = window._messageCache[file];
         } else {
             const markdownRes = await fetch(`./messages/${file}`);
-            if (!markdownRes.ok) throw new Error('File not found');
+            if (!markdownRes.ok) throw new Error();
             md = await markdownRes.text();
             window._messageCache[file] = md;
         }
@@ -52,39 +61,32 @@
 
         if (paginationContainer) {
             const prevLink = index > 0
-                ? `<a href="message.html?file=${allMessages[index-1]}">← Back</a>`
-                : `<span style="opacity:0.5;">← Back</span>`;
-            const nextLink = index < allMessages.length - 1
-                ? `<a href="message.html?file=${allMessages[index+1]}">Next →</a>`
-                : `<span style="opacity:0.5;">Next →</span>`;
-            paginationContainer.innerHTML = `<div style="display:flex; justify-content: space-between; gap: 40px;">${prevLink}${nextLink}</div>`;
-        }
+                ? `<a href="message.html?file=${categoryMessages[index - 1]}">← Back</a>`
+                : `<span style="opacity:0.4;">← Back</span>`;
 
-        if (shareBtn) {
-            shareBtn.onclick = async () => {
-                if (navigator.share) {
-                    try {
-                        await navigator.share({
-                            title: file.replace('.md', ''),
-                            text: "Check out this message from Messages from 061.",
-                            url: window.location.href
-                        });
-                    } catch {}
-                } else {
-                    alert("Copy this URL:\n" + window.location.href);
-                }
-            };
+            const nextLink = index < categoryMessages.length - 1
+                ? `<a href="message.html?file=${categoryMessages[index + 1]}">Next →</a>`
+                : `<span style="opacity:0.4;">Next →</span>`;
+
+            paginationContainer.innerHTML = `
+                <div style="display:flex; justify-content: space-between; gap:40px;">
+                    ${prevLink}
+                    ${nextLink}
+                </div>
+            `;
         }
 
         document.addEventListener('keydown', e => {
-            if (index < 0) return;
-            if (e.key === 'ArrowLeft' && index > 0) window.location.href = `message.html?file=${allMessages[index-1]}`;
-            if (e.key === 'ArrowRight' && index < allMessages.length - 1) window.location.href = `message.html?file=${allMessages[index+1]}`;
+            if (e.key === 'ArrowLeft' && index > 0) {
+                window.location.href = `message.html?file=${categoryMessages[index - 1]}`;
+            }
+            if (e.key === 'ArrowRight' && index < categoryMessages.length - 1) {
+                window.location.href = `message.html?file=${categoryMessages[index + 1]}`;
+            }
         });
 
-    } catch (err) {
+    } catch {
         contentContainer.innerHTML = '<p>Could not load message.</p>';
         if (paginationContainer) paginationContainer.innerHTML = '';
-        console.error(err);
     }
 })();
